@@ -1,15 +1,10 @@
-# gfit
+# gfit 1.0 (November 2007)
 Global Kd Fit
 
-cb 1.0
+## SYNOPSIS
+	gfit [OPTION] [FILE]
 
-NAME
-	cranberry or shortly cb
-
-SYNOPSIS
-	cb [OPTION] [FILE]
-
-DESCRIPTION
+## DESCRIPTION
 	Performs optimization and non-linear least square fitting of 
 	a function that describes the relation between experimental 
 	parameters including dissociation constant Kd and measured NMR
@@ -27,18 +22,18 @@ DESCRIPTION
 	-p [PARAMETER FILE]	
 		parameter file.
 		see PARAMETER FILE for details
-		assume cb.par is if parameter file is not entered
+		assume gfit.par is if parameter file is not entered
 
 	-d [DATA FILE]	
 		data file. mandatory argument
 		see DATA FILE for details
 
 	e.g.
-	cb -g -d test.dat or cb -gd test.dat
-	cb -l -d test.dat or cb -ld test.dat
-	cb -p a.par -gd test.dat
+	gfit -g -d test.dat or gfit -gd test.dat
+	gfit -l -d test.dat or gfit -ld test.dat
+	gfit -p a.par -gd test.dat
 	
-DATA FILE 
+## DATA FILE 
 	Single data file in ASCII text format is required.
 	Lines begining with '#' are regared as comments.
 	The first line of data set for a residue begins by keyword 'RESIDUE'.
@@ -62,7 +57,7 @@ DATA FILE
 	.....	.....	.....
 	
 
-PARAMETER FILE
+## PARAMETER FILE
 	Single parameter file in ASCII text format is required.
 	Reserved keywords for the first words: 'fit', 'par', 'fix'
 	Reserved parameter names: 'const', 'label', 'Kd'
@@ -85,16 +80,8 @@ PARAMETER FILE
 	par Kd 0 0.1 0.001 0.0001 0 0
 	fix label 0.2
 	
-AUTHOR
+## AUTHOR
 	written by Sung-Hun Bae
 
-REPORTING BUGS
+## REPORTING BUGS
 	Report bugs to sunghun.bae@gmail.com
-
-COPYRIGHT
-	This is free software. You may redistribute copies of it under the
-	terms of the GNU General Public License 
-	<http://www.gnu.org/licenses/gpl.html> 
-	There is NO WARRANTY, to the extent permitted by law.
-
-cb 1.0				November 2007

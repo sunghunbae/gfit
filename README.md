@@ -79,9 +79,45 @@ Global Kd Fit
 	par const 0 10 1 0.001 0 0
 	par Kd 0 0.1 0.001 0.0001 0 0
 	fix label 0.2
-	
-## AUTHOR
-	written by Sung-Hun Bae
 
-## REPORTING BUGS
-	Report bugs to sunghun.bae@gmail.com
+## Example Output
+
+	gfit 1.0 (November 2007) written by Sung-Hun Bae
+
+gf> check data file
+    name of data file                   : test1.dat
+    number of lines                     : 93
+    number of residues to be fitted     : 3 out of 3
+    number of maximum data points       : 29
+gf> reading parameter file : gfit1.par
+    number of MC simulations 300
+    number of MC simulations trimmed 2*5
+    acceptance for Chi-square criteria 0.05
+    fix label = 0.2
+       Param     Value [ Lower BND ... Upper BND | Grid Step ] Conv.Limit
+    L* const 0.000e+00 [ 0.000e+00 ... 1.000e+01 | 1.000e+00 ] 1.00E-03
+    L  label 2.000e-01 [ 0.000e+00 ... 1.000e+00 | 1.000e-02 ] 1.00E-02
+    L* Kd    0.000e+00 [ 0.000e+00 ... 1.000e-01 | 1.000e-03 ] 1.00E-04
+gf> reading data file : test1.dat
+gf> fit GLOBAL Kd
+gf> first, fitting local Kd
+    RESIDUE    1 const      2.5 +/-  0.01315    Kd 9.99e-03 +/- 8.21e-04
+    RESIDUE    2 const        6 +/-   0.0161    Kd 1.50e-02 +/- 4.86e-04
+    RESIDUE    3 const     15.5 +/-  0.01398    Kd 1.30e-02 +/- 1.49e-04
+gf> set parameter boundary
+       Param     Value [ Lower BND ... Upper BND | Grid Step ] Conv.Limit
+    L* const 1.550e+01 [ 0.000e+00 ... 1.000e+01 | 1.000e+00 ] 1.00E-03
+    L  label 2.000e-01 [ 0.000e+00 ... 1.000e+00 | 1.000e-02 ] 1.00E-02
+    G* Kd    1.249e-02 [ 4.994e-03 ... 2.998e-02 | 1.000e-04 ] 1.00E-04
+gf> global minimization by BRENT algorithm
+    1 [0.0049940, 0.0191681] 0.0124881 0.0141741 f= 54.647
+    2 [0.0124881, 0.0191681] 0.0130861 0.0066800 f= 32.708
+    3 [0.0130861, 0.0191681] 0.0131831 0.0060820 f= 32.4757
+    4 [0.0130861, 0.0131831] 0.0131589 0.0000970 f= 32.4496
+gf> adjusted local parameters
+    RESIDUE    1 const    2.545 +/- 0.005732    Kd 1.32e-02
+    RESIDUE    2 const    5.943 +/- 0.006081    Kd 1.32e-02
+    RESIDUE    3 const    15.51 +/- 0.005617    Kd 1.32e-02
+gf> started  Thu Sep 13 10:38:24 2018
+gf> finished Thu Sep 13 10:38:24 2018
+gf> time elapsed 00:00:00

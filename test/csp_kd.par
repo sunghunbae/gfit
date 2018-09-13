@@ -1,0 +1,6 @@
+# cranberry parameter file
+fit -mc 300 -mctrim 5 -critx2 0.05
+par const 0 10 1 0.001 0 0
+par label 0 1 	0.01 0.01 0 0
+par Kd 	0 0.1 0.001 0.0001 0 0
+fix label 0.1

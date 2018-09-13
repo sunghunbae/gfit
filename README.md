@@ -5,6 +5,7 @@ Global Kd Fit
 	gfit [OPTION] [FILE]
 
 ## DESCRIPTION
+```
 	Performs optimization and non-linear least square fitting of 
 	a function that describes the relation between experimental 
 	parameters including dissociation constant Kd and measured NMR
@@ -32,8 +33,10 @@ Global Kd Fit
 	gfit -g -d test.dat or gfit -gd test.dat
 	gfit -l -d test.dat or gfit -ld test.dat
 	gfit -p a.par -gd test.dat
+```
 	
 ## DATA FILE 
+```
 	Single data file in ASCII text format is required.
 	Lines begining with '#' are regared as comments.
 	The first line of data set for a residue begins by keyword 'RESIDUE'.
@@ -55,9 +58,10 @@ Global Kd Fit
 	&
 	RESIDUE 122 0
 	.....	.....	.....
+```
 	
-
 ## PARAMETER FILE
+```
 	Single parameter file in ASCII text format is required.
 	Reserved keywords for the first words: 'fit', 'par', 'fix'
 	Reserved parameter names: 'const', 'label', 'Kd'
@@ -79,9 +83,10 @@ Global Kd Fit
 	par const 0 10 1 0.001 0 0
 	par Kd 0 0.1 0.001 0.0001 0 0
 	fix label 0.2
+```
 
 ## Example Output
-
+```
 	gfit 1.0 (November 2007) written by Sung-Hun Bae
 
 gf> check data file
@@ -121,3 +126,4 @@ gf> adjusted local parameters
 gf> started  Thu Sep 13 10:38:24 2018
 gf> finished Thu Sep 13 10:38:24 2018
 gf> time elapsed 00:00:00
+```
